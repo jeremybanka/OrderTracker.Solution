@@ -31,6 +31,7 @@ If you want to mod the styles, you'll need a way to turn the source SCSS into co
 - Click "**Watch Sass**". You'll see this option show up in your status bar, bottom right of your editor, in any repo holding `.scss` files.
 - Now, when you save an `.scss` file, the corresponding `.css` and `.css.map` will update! 😃
 - `dotnet watch run` won't know that though. You'll have to save a `.cs` or `.cshtml` file, then reload to see your styling changes applied. 🙄
+- Also, disable cache in your browser's Network dev tools.
 
 ## Known Bugs
 
