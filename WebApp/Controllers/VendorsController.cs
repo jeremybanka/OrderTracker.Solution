@@ -6,9 +6,21 @@ namespace OrderTracker
   public class VendorsController : Controller
   {
     [HttpGet("/vendors")]
-    public ActionResult Index()
+    public ActionResult Index() => View(Vendor.All());
+
+    [HttpGet("/vendors/new")]
+    public ActionResult New() => View();
+
+    [HttpGet("/vendors/{id}")]
+    public ActionResult Show(string id) => View(
+      Vendor.All().Find(v => v.Id.ToString() == id)
+    );
+
+    [HttpPost("/vendors")]
+    public ActionResult Create(string name, string desc)
     {
-      return View(Vendor.All());
+      Vendor v = new(name, desc);
+      return Redirect($"vendors/{v.Id}");
     }
   }
 }
