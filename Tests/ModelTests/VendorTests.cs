@@ -1,16 +1,36 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OrderTracker.Models;
+using System;
 
 namespace OrderTracker.Tests
 {
   [TestClass]
-  public class VendorTests
+  public class VendorTests : IDisposable
   {
+    public void Dispose()
+    {
+      Vendor.Purge();
+      GC.SuppressFinalize(this);
+    }
+
     [TestMethod]
     public void Ctor_MakesInstOf_Vendor()
     {
       Vendor v = new("Suzy's Bakery", "Sells plenty of tasty BREADs.");
       Assert.AreEqual(typeof(Vendor), v.GetType());
+    }
+
+    [TestMethod]
+    public void Ctor_AddsConstructedVendor_ToInstances()
+    {
+      string TEST = "TEST";
+
+      new Vendor("", "");
+      new Vendor(TEST, "");
+      new Vendor("", "");
+
+      Assert.AreEqual(3, Vendor.All().Count);
+      Assert.AreEqual(TEST, Vendor.All()[1].Name);
     }
 
     [TestMethod]
