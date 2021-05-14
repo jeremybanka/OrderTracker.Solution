@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,IAAI,CAAC;EACH,WAAW,EAAE,OAAO;CAQrB;;AATD,AAEE,IAFE,CAEF,EAAE,CAAC;EACD,WAAW,EAAE,GAAG;CACjB;;AAJH,AAKE,IALE,CAKF,EAAE,CAAC;EACD,WAAW,EAAE,GAAG;EAChB,UAAU,EAAE,MAAM;CACnB",
+    "sources": [
+        "spine.scss"
+    ],
+    "names": [],
+    "file": "spine.css"
+}
