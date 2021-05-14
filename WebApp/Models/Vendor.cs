@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace OrderTracker.Models
@@ -6,12 +7,14 @@ namespace OrderTracker.Models
   {
     public string Name { get; }
     public string Desc { get; }
+    public Guid Id { get; }
     public List<Order> Orders { get; }
     private static List<Vendor> _instances = new();
     public Vendor(string name, string desc)
     {
       Name = name;
       Desc = desc;
+      Id = Guid.NewGuid();
       Orders = new();
       _instances.Add(this);
     }
