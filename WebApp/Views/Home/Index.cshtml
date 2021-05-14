@@ -1,2 +1,29 @@
+<!-- 🥷 -->
+<!-- prettier-ignore -->
+@{ Layout = "_Layout"; } @using System;
+
+@{ 
+  var now = @DateTime.Now; 
+  var wkdy = now.DayOfWeek.ToString();
+  var hour = now.Hour;
+  var hi = hour switch
+  {
+    var h when (h >= 0 && h <= 03) => "Go to Sleep!",
+    var h when (h >= 4 && h <= 11) => "Good Morning!",
+    var h when (h >= 12 && h <= 5) => "Good Afternoon!",
+    var h when (h >= 6 && h <= 23) => "Good Evening!",
+    _ => "...what the heck time is it?"
+  };
+  var gday = wkdy switch
+  {
+    "Thursday" => "Nigh-Friday",
+    _ => wkdy
+  };
+}
+<!-- prettier-ignore-end -->
+
+<h1>@hi</h1>
+<h2>and happy @wkdy</h2>
+
 <a href="orders">View Orders</a>
 <a href="orders/new">New Order</a>
