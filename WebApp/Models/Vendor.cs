@@ -1,6 +1,6 @@
 namespace OrderTracker
 {
-  class Vendor
+  public class Vendor
   {
     public string Name { get; }
     public string Desc { get; }

@@ -1,8 +1,8 @@
 using System;
 
-namespace OrderTracker
+namespace OrderTracker.Models
 {
-  class Order
+  public class Order
   {
     public string Name { get; }
     public string Desc { get; }
@@ -13,7 +13,7 @@ namespace OrderTracker
       Name = name;
       Desc = desc;
       Cost = cost;
-      Date = new().Now;
+      Date = DateTime.Now;
     }
   }
 }
