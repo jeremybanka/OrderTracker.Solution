@@ -1,10 +1,66 @@
-body {
-  font-family: Brahmin;
-  h1 {
-    font-weight: 600;
-  }
-  h2 {
-    font-weight: 300;
-    font-style: italic;
+html {
+  background: #aaa;
+  font-size: 24px;
+  body {
+    font-family: Brahmin;
+    h1 {
+      font-weight: 600;
+    }
+    h2 {
+      font-weight: 300;
+      font-style: italic;
+    }
+    main {
+      width: calc(100% - 10px);
+      max-width: 450px;
+      margin: auto;
+      form {
+        section {
+          width: 100%;
+          display: flex;
+          justify-content: flex-end;
+          gap: 10px;
+          ~ section {
+            margin-top: 20px;
+          }
+          input[type="text"],
+          button {
+            font-family: Brahmin;
+            font-weight: 300;
+            background: none;
+            font-size: 24px;
+            line-height: 1.1em;
+            box-sizing: border-box;
+            outline: none;
+          }
+          input[type="text"] {
+            font-style: italic;
+            border-radius: 0;
+            border: none;
+            color: #555;
+            border-bottom: 2px solid #777;
+            &:focus,
+            &:focus-within {
+              color: black;
+              border-bottom: 2px solid black;
+            }
+          }
+          button {
+            margin-top: 5px;
+            height: 36px;
+            padding: 1px 12px 3px;
+            border: 2px solid black;
+            border-radius: 18px;
+            transition-property: all;
+            transition-duration: 200ms;
+            cursor: pointer;
+            &:hover {
+              background: #444;
+              color: #aaa;
+            }
+          }
+        }
+      }
+    }
   }
 }

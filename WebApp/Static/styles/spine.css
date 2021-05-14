@@ -1,13 +1,82 @@
-body {
+html {
+  background: #aaa;
+  font-size: 24px;
+}
+
+html body {
   font-family: Brahmin;
 }
 
-body h1 {
+html body h1 {
   font-weight: 600;
 }
 
-body h2 {
+html body h2 {
   font-weight: 300;
   font-style: italic;
+}
+
+html body main {
+  width: calc(100% - 10px);
+  max-width: 450px;
+  margin: auto;
+}
+
+html body main form section {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  gap: 10px;
+}
+
+html body main form section ~ section {
+  margin-top: 20px;
+}
+
+html body main form section input[type="text"],
+html body main form section button {
+  font-family: Brahmin;
+  font-weight: 300;
+  background: none;
+  font-size: 24px;
+  line-height: 1.1em;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+}
+
+html body main form section input[type="text"] {
+  font-style: italic;
+  border-radius: 0;
+  border: none;
+  color: #555;
+  border-bottom: 2px solid #777;
+}
+
+html body main form section input[type="text"]:focus, html body main form section input[type="text"]:focus-within {
+  color: black;
+  border-bottom: 2px solid black;
+}
+
+html body main form section button {
+  margin-top: 5px;
+  height: 36px;
+  padding: 1px 12px 3px;
+  border: 2px solid black;
+  border-radius: 18px;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 200ms;
+          transition-duration: 200ms;
+  cursor: pointer;
+}
+
+html body main form section button:hover {
+  background: #444;
+  color: #aaa;
 }
 /*# sourceMappingURL=spine.css.map */
