@@ -21,6 +21,14 @@ namespace OrderTracker.Tests
     }
 
     [TestMethod]
+    public void Ctor_GivesNewVendor_ValidGuid()
+    {
+      Vendor v = new("", "");
+
+      Assert.IsTrue(Guid.TryParse(v.Id.ToString(), out _));
+    }
+
+    [TestMethod]
     public void Ctor_AddsConstructedVendor_ToInstances()
     {
       string TEST = "TEST";
