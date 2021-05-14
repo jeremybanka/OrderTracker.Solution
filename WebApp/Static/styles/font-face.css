@@ -1,0 +1,106 @@
+/* prettier-ignore */
+@font-face {
+  font-family: "Brahmin";
+  font-weight: 100;
+  src: url("../fonts/Brahmin-1r.woff") format("woff");
+  src: url("../fonts/Brahmin-1r.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Brahmin";
+  font-weight: 100;
+  font-style: italic;
+  src: url("../fonts/Brahmin-1i.woff") format("woff");
+  src: url("../fonts/Brahmin-1i.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Brahmin";
+  font-weight: 200;
+  src: url("../fonts/Brahmin-2r.woff") format("woff");
+  src: url("../fonts/Brahmin-2r.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Brahmin";
+  font-weight: 200;
+  font-style: italic;
+  src: url("../fonts/Brahmin-2i.woff") format("woff");
+  src: url("../fonts/Brahmin-2i.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Brahmin";
+  font-weight: 300;
+  src: url("../fonts/Brahmin-3r.woff") format("woff");
+  src: url("../fonts/Brahmin-3r.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Brahmin";
+  font-weight: 300;
+  font-style: italic;
+  src: url("../fonts/Brahmin-3i.woff") format("woff");
+  src: url("../fonts/Brahmin-3i.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Brahmin";
+  font-weight: 400;
+  src: url("../fonts/Brahmin-4r.woff") format("woff");
+  src: url("../fonts/Brahmin-4r.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Brahmin";
+  font-weight: 400;
+  font-style: italic;
+  src: url("../fonts/Brahmin-4i.woff") format("woff");
+  src: url("../fonts/Brahmin-4i.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Brahmin";
+  font-weight: 500;
+  src: url("../fonts/Brahmin-5r.woff") format("woff");
+  src: url("../fonts/Brahmin-5r.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Brahmin";
+  font-weight: 500;
+  font-style: italic;
+  src: url("../fonts/Brahmin-5i.woff") format("woff");
+  src: url("../fonts/Brahmin-5i.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Brahmin";
+  font-weight: 600;
+  src: url("../fonts/Brahmin-6r.woff") format("woff");
+  src: url("../fonts/Brahmin-6r.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Brahmin";
+  font-weight: 600;
+  font-style: italic;
+  src: url("../fonts/Brahmin-6i.woff") format("woff");
+  src: url("../fonts/Brahmin-6i.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Brahmin";
+  font-weight: 700;
+  src: url("../fonts/Brahmin-7r.woff") format("woff");
+  src: url("../fonts/Brahmin-7r.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Brahmin";
+  font-weight: 700;
+  font-style: italic;
+  src: url("../fonts/Brahmin-7i.woff") format("woff");
+  src: url("../fonts/Brahmin-7i.woff2") format("woff2");
+}
+/*# sourceMappingURL=font-face.css.map */
