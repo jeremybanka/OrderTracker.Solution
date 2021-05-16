@@ -23,6 +23,7 @@ namespace OrderTracker.Models
       Orders.Add(new(name, desc, cost));
     }
     public static List<Vendor> All() => _instances;
+    public static Vendor Find(string vendorId) => All().Find(v => v.Id.ToString() == vendorId);
     public static void Purge() { _instances.Clear(); }
   }
 }
