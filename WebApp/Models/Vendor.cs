@@ -22,8 +22,10 @@ namespace OrderTracker.Models
     {
       Orders.Add(new(name, desc, cost));
     }
+    public Order FindOrder(string orderId) => Orders.Find(o => o.Id.ToString() == orderId);
+
     public static List<Vendor> All() => _instances;
-    public static Vendor Find(string vendorId) => All().Find(v => v.Id.ToString() == vendorId);
+    public static Vendor Find(string id) => All().Find(v => v.Id.ToString() == id);
     public static void Purge() { _instances.Clear(); }
   }
 }
