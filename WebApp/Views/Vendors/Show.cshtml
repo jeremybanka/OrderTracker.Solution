@@ -4,3 +4,18 @@
 <!-- prettier-ignore-end -->
 
 <h1>@Model.Name</h1>
+<h2>@Model.Desc</h2>
+<ul>
+  <h3>Orders</h3>
+  @if (Model.Orders.Count == 0) {
+  <p>No Orders</p>
+  } @foreach (Order o in Model.Orders) {
+  <li>
+    <h4>@o.Name</h4>
+    <h5>@o.Desc</h5>
+    <p>$@o.Cost</p>
+  </li>
+  }
+  <a href="/vendors/@Model.Id/orders/new">Add Order</a>
+</ul>
+<a href="/vendors" class="small">All Vendors</a>
