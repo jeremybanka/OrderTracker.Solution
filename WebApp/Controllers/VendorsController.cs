@@ -12,9 +12,7 @@ namespace OrderTracker
     public ActionResult New() => View();
 
     [HttpGet("/vendors/{id}")]
-    public ActionResult Show(string id) => View(
-      Vendor.All().Find(v => v.Id.ToString() == id)
-    );
+    public ActionResult Show(string id) => View(Vendor.Find(id));
 
     [HttpPost("/vendors")]
     public ActionResult Create(string name, string desc)
