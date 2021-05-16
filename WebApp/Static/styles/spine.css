@@ -1,6 +1,6 @@
 html {
   background: #aaa;
-  font-size: 24px;
+  font-size: 20px;
 }
 
 html body {
@@ -26,7 +26,17 @@ html body h3 {
 }
 
 html body h4 {
-  font-size: 20px;
+  font-size: 24px;
+}
+
+html body h5 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 200;
+}
+
+html body p {
+  margin: 0 auto 10px;
 }
 
 html body main {

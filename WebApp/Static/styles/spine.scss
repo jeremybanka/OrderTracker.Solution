@@ -1,6 +1,6 @@
 html {
   background: #aaa;
-  font-size: 24px;
+  font-size: 20px;
   body {
     font-family: Brahmin;
     h1 {
@@ -19,7 +19,15 @@ html {
       font-size: 24px;
     }
     h4 {
-      font-size: 20px;
+      font-size: 24px;
+    }
+    h5 {
+      margin: 0;
+      font-size: 18px;
+      font-weight: 200;
+    }
+    p {
+      margin: 0 auto 10px;
     }
     main {
       width: calc(100% - 10px);
