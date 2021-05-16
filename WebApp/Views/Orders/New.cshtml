@@ -1,0 +1,26 @@
+<!-- prettier-ignore -->
+@{ 
+  Layout = "_Layout"; 
+  string id = Model.Id.ToString();
+}
+<!-- prettier-ignore-end -->
+
+<h3>@Model.Name</h3>
+<h2>Add Order</h2>
+<form action="/vendors/@id/orders" method="post">
+  <section>
+    <label for="name">Name</label>
+    <input id="name" name="name" type="text" />
+  </section>
+  <section>
+    <label for="desc">Description</label>
+    <input id="desc" name="desc" type="text" />
+  </section>
+  <section>
+    <label for="cost">Cost</label>
+    <input id="cost" name="cost" type="number" />
+  </section>
+  <section>
+    <button type="submit">Done</button>
+  </section>
+</form>
