@@ -51,5 +51,16 @@ namespace OrderTracker.Tests
 
       Assert.AreEqual(startingCount + 1, v.Orders.Count);
     }
+
+    [TestMethod]
+    public void Find_ReturnsVendor_WithSpecificGuid()
+    {
+      Vendor v = new("", "");
+      Guid g = v.Id;
+
+      Vendor found = Vendor.Find(g.ToString());
+
+      Assert.AreEqual(v, found);
+    }
   }
 }
