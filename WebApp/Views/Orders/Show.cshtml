@@ -1,0 +1,13 @@
+<!-- prettier-ignore -->
+@{ Layout = "_Layout"; } 
+@using OrderTracker.Models
+@{
+  Vendor v = Model.Item1;
+  Order o = Model.Item2;
+}
+<!-- prettier-ignore-end -->
+
+<h2>@o.Desc</h2>
+<h3>@o.Name</h3>
+<h5>@o.Cost</h5>
+<a href="/vendors/@v.Id" class="small">Back to @v.Name</a>

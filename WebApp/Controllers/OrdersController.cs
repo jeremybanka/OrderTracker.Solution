@@ -6,10 +6,10 @@ namespace OrderTracker
 {
   public class OrdersController : Controller
   {
-    [HttpGet("vendors/{vendorId}/orders/new")]
+    [HttpGet("/vendors/{vendorId}/orders/new")]
     public ActionResult New(string vendorId) => View(Vendor.Find(vendorId));
 
-    [HttpGet("vendors/{vendorId}/orders/{orderId}")]
+    [HttpGet("/vendors/{vendorId}/orders/{orderId}")]
     public ActionResult Show(string vendorId, string orderId)
     {
       Vendor v = Vendor.Find(vendorId);
@@ -17,7 +17,7 @@ namespace OrderTracker
       return View((v, o));
     }
 
-    [HttpPost("vendors/{vendorId}/orders")]
+    [HttpPost("/vendors/{vendorId}/orders")]
     public ActionResult Create(
       string vendorId,
       string name,
@@ -28,7 +28,7 @@ namespace OrderTracker
       Vendor v = Vendor.Find(vendorId);
       v.NewOrder(name, desc, cost);
       Order o = v.Orders.Last();
-      return Redirect($"vendors/{v.Id}/orders/{o.Id}");
+      return Redirect($"/vendors/{v.Id}/orders/{o.Id}");
     }
   }
 }
