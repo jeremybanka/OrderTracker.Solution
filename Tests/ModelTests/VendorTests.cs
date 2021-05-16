@@ -1,6 +1,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OrderTracker.Models;
 using System;
+using System.Linq;
 
 namespace OrderTracker.Tests
 {
@@ -42,7 +43,7 @@ namespace OrderTracker.Tests
     }
 
     [TestMethod]
-    public void NewOrder_Increments_OrderCount()
+    public void StaticNewOrder_Increments_OrderCount()
     {
       Vendor v = new("Suzy's Bakery", "Sells plenty of tasty BREADs.");
       int startingCount = v.Orders.Count;
@@ -53,7 +54,7 @@ namespace OrderTracker.Tests
     }
 
     [TestMethod]
-    public void Find_ReturnsVendor_WithSpecificGuid()
+    public void StaticFind_ReturnsVendor_WithSpecificGuid()
     {
       Vendor v = new("", "");
       Guid g = v.Id;
@@ -61,6 +62,18 @@ namespace OrderTracker.Tests
       Vendor found = Vendor.Find(g.ToString());
 
       Assert.AreEqual(v, found);
+    }
+    [TestMethod]
+    public void FindOrder_ReturnsOrder_WithSpecificGuid()
+    {
+      Vendor v = new("", "");
+      v.NewOrder("", "", 0);
+      Order o = v.Orders.Last();
+      Guid g = o.Id;
+
+      Order found = v.FindOrder(g.ToString());
+
+      Assert.AreEqual(o, found);
     }
   }
 }
