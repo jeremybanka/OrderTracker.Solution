@@ -9,17 +9,45 @@ html body {
 
 html body h1 {
   font-weight: 600;
+  margin-bottom: 0;
 }
 
-html body h2 {
+html body h2,
+html body h4 {
+  margin: 0;
   font-weight: 300;
   font-style: italic;
+}
+
+html body h3 {
+  margin-bottom: 0;
+  font-weight: 600;
+  font-size: 24px;
+}
+
+html body h4 {
+  font-size: 20px;
 }
 
 html body main {
   width: calc(100% - 10px);
   max-width: 450px;
   margin: auto;
+}
+
+html body main ul li {
+  position: relative;
+  width: calc(100% - 70px);
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  border-bottom: 2px dotted #777;
+}
+
+html body main ul li a {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: auto;
 }
 
 html body main form section {
@@ -62,7 +90,9 @@ html body main form section input[type="text"]:focus, html body main form sectio
   border-bottom: 2px solid black;
 }
 
-html body main form section button {
+button,
+a {
+  color: black;
   margin-top: 5px;
   height: 36px;
   padding: 1px 12px 3px;
@@ -73,10 +103,25 @@ html body main form section button {
   -webkit-transition-duration: 200ms;
           transition-duration: 200ms;
   cursor: pointer;
+  text-decoration: none;
 }
 
-html body main form section button:hover {
+button.small,
+a.small {
+  font-size: 18px;
+  height: 24px;
+  padding-bottom: 0px;
+}
+
+button:hover,
+a:hover {
   background: #444;
+  color: #aaa;
+}
+
+button:active,
+a:active {
+  background: black;
   color: #aaa;
 }
 /*# sourceMappingURL=spine.css.map */
